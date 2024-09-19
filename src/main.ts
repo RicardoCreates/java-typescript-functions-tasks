@@ -35,3 +35,13 @@ const squaredList = sortedList.map(num => num ** 2);
 console.log("Squared Numbers", squaredList);
 
 // Step 3
+const reducedList = sortedList.slice(4 ,-2);
+console.log("After Removing Lowest 2 and Highest 4:", reducedList);
+
+// Step 4
+const filteredList = reducedList.filter(num => num % 4 !== 0);
+console.log("After removing Numbers Devisible by 4:", filteredList);
+
+// Step 5
+const sumBonus = filteredList.reduce((total, num)=> total + num, 0);
+console.log("Sum of the Remaning Numbers: ", sumBonus);
